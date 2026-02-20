@@ -1,0 +1,120 @@
+body {
+  background-color: #1e1e2f;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Calculadora agora é mais larga para caber 5 colunas */
+.container {
+  width: 350px; 
+  background: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h2, h3 { margin-top: 0; color: #00d2ff; }
+h2 { font-size: 20px; }
+
+.display {
+  background: #eee;
+  color: #333;
+  padding: 15px;
+  margin-bottom: 15px;
+  min-height: 30px;
+  font-size: 28px;
+  border-radius: 5px;
+  text-align: right;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* Teclado com 5 colunas */
+.teclado.cientifico {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+button {
+  background: #3f3f5a;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover { background: #52527a; }
+
+.operador { background: #ff007f; font-weight: bold; }
+.operador:hover { background: #ff3399; }
+
+/* Cor para os botões científicos (sin, cos, %, raiz) */
+.especial { background: #5a5a8a; }
+.especial:hover { background: #6b6ba3; }
+.nulo { background: transparent; cursor: default;}
+.nulo:hover { background: transparent; }
+
+.limpar { background: #ff4d4d; font-weight: bold;}
+.limpar:hover { background: #ff6666; }
+
+.igual { background: #00d2ff; color: #1e1e2f; font-weight: bold; }
+.igual:hover { background: #33dbff; }
+
+/* ======== HISTÓRICO E BOTÃO APAGAR ======== */
+.historico-container {
+  background: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  width: 240px;
+  height: 360px;
+  overflow-y: auto;
+}
+
+.historico-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historico-container li {
+  background: #3f3f5a;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #00d2ff;
+  display: flex;
+  justify-content: space-between; /* Coloca o texto de um lado e o botão do outro */
+  align-items: center;
+}
+
+/* O "X" vermelho do lado de cada conta */
+.btn-apagar {
+  background: transparent;
+  color: #ff4d4d;
+  padding: 0 5px;
+  margin: 0;
+  font-size: 14px;
+  box-shadow: none;
+}
+.btn-apagar:hover {
+  background: rgba(255, 77, 77, 0.2);
+  color: #ff6666;
+}
